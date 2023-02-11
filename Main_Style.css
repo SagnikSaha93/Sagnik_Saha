@@ -24,7 +24,7 @@
 
 .body
 {
-  background-image:url(file:///C:/Users/SAGNIK%20SAHA/Desktop/Portfolio/images/adrien-olichon-RCAhiGJsUUE-unsplash.jpg);
+  background-image:url(images/adrien-olichon-RCAhiGJsUUE-unsplash.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -43,7 +43,7 @@
 
 .work
 {
-  background-image: url(file:///C:/Users/SAGNIK%20SAHA/Desktop/Portfolio/images/office-865091_1280.jpg);
+  background-image: url(images/office-865091_1280.jpg);
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-size: 100% 100%;
@@ -54,7 +54,7 @@
 
 .skills
 {
-  background-image: url(file:///C:/Users/SAGNIK%20SAHA/Desktop/Portfolio/images/Techie%20Guy%20Running%20HD%20wallpaper.jpeg.jpg);
+  background-image: url(images/Techie%20Guy%20Running%20HD%20wallpaper.jpeg.jpg);
   background-repeat: no-repeat;
   background-attachment: center;
   background-size: 100% 100%;
@@ -68,7 +68,7 @@
 
 .project
 {
-  background-image: url(file:///C:/Users/SAGNIK%20SAHA/Desktop/Portfolio/images/computing.jpg);
+  background-image: url(images/computing.jpg);
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-size: 100% 100%;
@@ -82,7 +82,7 @@
 
 .about
 {
-    background-image: url(file:///C:/Users/SAGNIK%20SAHA/Desktop/Portfolio/images/pexels-toni-cuenca-585752.jpg);
+    background-image: url(images/pexels-toni-cuenca-585752.jpg);
     background-repeat: no-repeat;
     background-attachment: inherit;
     background-size: 100% 100%;
