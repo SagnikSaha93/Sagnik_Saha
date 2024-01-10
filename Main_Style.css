@@ -27,9 +27,8 @@
   background-image:url(images/adrien-olichon-RCAhiGJsUUE-unsplash.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: auto;
+  background-size: cover;
   max-width: 100%;
-  object-fit: cover;
 }
 
 .projectengineer
