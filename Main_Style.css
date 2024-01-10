@@ -25,10 +25,11 @@
 .body
 {
   background-image:url(images/adrien-olichon-RCAhiGJsUUE-unsplash.jpg);
-  /*background-repeat: no-repeat;*/
-  /*background-attachment: fixed;*/
-  background-size: cover;
-  max-width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
 .projectengineer
