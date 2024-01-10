@@ -27,7 +27,7 @@
   background-image:url(images/adrien-olichon-RCAhiGJsUUE-unsplash.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100% 100%;
+  background-size: auto;
   max-width: 100%;
   object-fit: cover;
 }
