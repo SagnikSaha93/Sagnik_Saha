@@ -1,38 +1,104 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>projects</title>
-    <meta http-equiv="refresh" content="60">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Main_Style.css">
-  </head>
+
+<head>
+  <title>Projects</title>
+  <meta http-equiv="refresh" content="60">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Main_Style.css">
+</head>
+
 <body style="background-color:black">
+  <video autoplay muted loop class="bg-video">
+    <source src="images/snowfall-in-forest.3840x2160.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Projects Section -->
   <div class="project">
-    <a href="index.html"><img src="images/kindpng_822678.png"; style="width:20px;height:20px"></a>
+    <h2 style="text-align: center; font-style: italic; margin-bottom: 30px;">Projects & Training</h2>
 
-      <h2 style="text-align: center;font-style: italic">Projects & Training</h2>
-        <li>Domain & DNS in an Enterprise (06/2019 - 07/2019)</li>
-        <ul>Created a GCP account and setting up billing account</ul>
-        <ul>Creating and Opening Instance</ul>
-        <ul>Installing Terminal Services and creating users</ul>
-        <uL>Creating Legacy Application</ul>
-        <ul>Code Script and Giving Permission and logged in as a user account</ul>
-        <br><li>Online Cloud Storage System</li>
-        <ul>Made an online cloud storage system which helps to move files from on premises to cloud system</ul>
-        <br><li>Aspire vision Tech Project (06/2019 - 07/2019)</li>
-        <ul>Training on Cloud Computing and did a project on "Domain & DNS in an Enterprise"</ul>
-        <br><li>Microsoft Training Associate (05/2019 - 06/2019)</li>
-        <ul>Trained on various core principles of using Google Cloud Platform</ul>
-        <ul>Worked on GCP, AWS</ul>
-        <br><li>Industrial Training Institute (04/2013 - 06/2013)</li>
-        <ul>Trained on Computer Fundamentals</ul>
-        <ul>Hands on experience on MS-Office & Internet (ICT 101)</ul>
-        <ul>Worked on Information & Communication Technology</ul>
-        <br><li>The Generative AI Fundamentals & Responsible Usage at Wipro (2023)</li>
-
-    <div class="keys">
-      <p><button style="cursor: pointer;background-color: black;width:90px;height:30px;border-radius: 20px"><a href="Skills.html" style="text-decoration:none;color:white">Previous</button>
-         <button style="cursor: pointer;background-color: black;width:90px;height:30px;border-radius: 20px"><a href="About.html" style="text-decoration:none;color:white">Next</button> </p>
+    <!-- Selected SDET Projects -->
+    <div class="job-card">
+      <h3>Westpac — 2025</h3>
+      <ul>
+        <li>Developed and migrated an automated test suite which was previously working on Selenium with Java for
+          multiple investment creation and critical user workflows using Playwright and Typescript.</li>
+        <li>Validated session handling, authentication flows, and regression scenarios to improve stability of LE&RA
+          runs.</li>
+        <li>Performed regression testing for other projects.</li>
+      </ul>
     </div>
+
+    <div class="job-card">
+      <h3>E-commerce Website Automation — 2025</h3>
+      <ul>
+        <li>Developed an automated test suite for login and critical user workflows using Selenium, Robot Framework, and
+          Python.</li>
+        <li>Validated session handling, authentication flows, and regression scenarios to improve stability of CI runs.
+        </li>
+      </ul>
+    </div>
+
+    <div class="job-card">
+      <h3>Web Scraping & Product Analysis (Amazon & Flipkart) — 2024</h3>
+      <ul>
+        <li>Built a Python-based framework to extract product search results, pricing, and trend data using Selenium +
+          Pandas.</li>
+        <li>Exported analysis to Excel and created Matplotlib reports to support competitive/pricing analysis.</li>
+      </ul>
+    </div>
+
+    <div class="job-card">
+      <h3>Domain & DNS in an Enterprise (GCP) — 2019</h3>
+      <ul>
+        <li>Configured GCP environment, deployed legacy applications, and validated multi-user access and DNS/services
+          for enterprise scenarios.</li>
+      </ul>
+    </div>
+
+    <!-- Previous Training & Courses -->
+    <div class="job-card">
+      <h3>Other Training & Certifications</h3>
+      <ul>
+        <li>Online Cloud Storage System: Built a cloud system for file transfer from on-premises to cloud.</li>
+        <li>Aspire Vision Tech Project — 06/2019 - 07/2019: Training on Cloud Computing and project on Domain & DNS.
+        </li>
+        <li>Microsoft Training Associate — 05/2019 - 06/2019: Trained on core GCP & AWS principles.</li>
+        <li>Industrial Training Institute — 04/2013 - 06/2013: Computer Fundamentals, MS-Office & Internet (ICT 101).
+        </li>
+        <li>The Generative AI Fundamentals & Responsible Usage at Wipro — 2023.</li>
+      </ul>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="keys keys-left">
+      <a href="Skills.html" class="key-btn">Previous</a>
+    </div>
+
+    <div class="keys keys-right">
+      <a href="About.html" class="key-btn">Next</a>
+    </div>
+
   </div>
+  <script>
+    // Reveal .job-card elements on scroll
+    const jobCards = document.querySelectorAll('.job-card');
+
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      jobCards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if (cardTop < triggerBottom) {
+          card.classList.add('visible');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll); // reveal cards if already in viewport
+  </script>
+
 </body>
+
+</html>
