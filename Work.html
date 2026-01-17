@@ -79,23 +79,52 @@
       <p>Description: Validating/Triaging/Debugging of Debug and Trace, Storage, Touch, IO_USB, Sensor & Automation
         (E2E) Compliance by providing necessary logs (PD, EC, PMC, ETW, NPK, BIOS, VISA Logs etc.)</p>
 
-      <h4>Roles and Responsibilities</h4>
+      <h4>Overview</h4>
       <ul>
-        <li>Effectively validated and triaged NPK logs, identifying and resolving critical issues (CSME, VISA, BIOS,
-          PTI, PMC, ETW, etc.).</li>
-        <li>Demonstrated expertise in Server Platforms, particularly in Storage, D&T, and Memory.</li>
-        <li>Tracked issues with HSD and promoted resolutions with sys-debug team.</li>
-        <li>Collected dump files and analyzed failures using Windbg, Putty, Intel ITP tool.</li>
-        <li>Verified bug fixes for firmware releases, handled client & stakeholder interactions.</li>
-        <li>Configured boards and tested embedded controllers, NVMe, SSD, UFS, and other storage devices.</li>
-        <li>Experienced in logging defects, post-silicon CPU bring-up, and debug tracing NPK logs.</li>
+        <li>Acted as quality gatekeeper for Intel firmware releases, ensuring test coverage, triage, and release
+          readiness for BIOS, CSME, IFWI and platform firmware components.</li>
+        <li>Owned test planning and coordinated cross-functional validation across storage, memory, BIOS and platform
+          teams.</li>
       </ul>
+
+      <h4>Key Contributions</h4>
+      <h5>Quality Assurance & Test Strategy</h5>
+      <ul>
+        <li>Designed and executed functional, regression, and system-level test cases for BIOS, CSME, and firmware
+          platforms.</li>
+        <li>Partnered with engineering teams to define release criteria and improve end-to-end validation coverage.</li>
+      </ul>
+
+      <h5>Test Automation & Process Improvements</h5>
+      <ul>
+        <li>Architected and implemented automation framework for IFWI & OS flashing flows, reducing manual test effort
+          by ~40%.</li>
+        <li>Automated test flows using Selenium, Robot Framework, and Python to increase test reliability and accelerate
+          regression cycles.</li>
+        <li>Integrated test automation into CI/CD (GitLab, GitHub, PACKMAN) enabling nightly regression runs and faster
+          validation turnaround.</li>
+      </ul>
+
+      <h5>Defect Management & Analysis</h5>
+      <ul>
+        <li>Validated and triaged NPK logs, BSODs, and system crashes; performed root-cause analysis using Windbg and
+          Intel ITP.</li>
+        <li>Managed bug tracking and verification in JIRA and HSDES; improved defect closure efficiency by ~25%.</li>
+        <li>Built dashboards and test-quality reports with Pandas, Matplotlib, and Excel to communicate defect trends
+          and release health to stakeholders.</li>
+      </ul>
+
+      <h5>Leadership & Collaboration</h5>
+      <ul>
+        <li>Mentored junior engineers on automation best practices and debugging methodologies.</li>
+        <li>Coordinated with Intel engineering teams across multiple domains to resolve high-priority issues and
+          streamline test processes.</li>
     </div>
 
     <!-- Previous Job Experience: Tata Consultancy Services -->
     <div class="job-card">
       <h3>Operation Executive</h3>
-      <p>Tata Consultancy Services, Agartala, TR | Jan '19 - March '19</p>
+      <p>Tata Consultancy Services, TR | Jan '19 - March '19</p>
       <p>Description: Entry-level role with focus on operations management and coordination.</p>
     </div>
 
@@ -114,7 +143,7 @@
     const jobCards = document.querySelectorAll('.job-card');
 
     const revealOnScroll = () => {
-      const triggerBottom = window.innerHeight * 0.85; // trigger when 85% of viewport
+      const triggerBottom = window.innerHeight * 0.99; // trigger when 99% of viewport
       jobCards.forEach(card => {
         const cardTop = card.getBoundingClientRect().top;
         if (cardTop < triggerBottom) {

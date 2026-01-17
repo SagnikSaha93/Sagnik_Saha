@@ -10,6 +10,11 @@
 </head>
 
 <body style="background-color:black">
+  <video autoplay muted loop class="bg-video">
+    <source src="images/sea-of-clouds-live-wallpaper-wallsflow-com.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
   <div class="skills">
     <section id="technical-skills" class="skills-section">
       <h2 class="section-title">Technical Skills</h2>
@@ -118,6 +123,10 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
+          // MOBILE ONLY: reveal content
+          if (window.innerWidth <= 768) {
+            entry.target.classList.add('mobile-reveal');
+          }
         }
       });
     }, { threshold: 0.2 });

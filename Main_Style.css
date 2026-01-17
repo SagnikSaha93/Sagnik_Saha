@@ -8,7 +8,7 @@
   --shadow: 0 10px 30px rgba(255, 107, 157, 0.3);
   --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --card-bg: rgba(20, 20, 30, 0.75);
-  
+
 }
 
 * {
@@ -59,10 +59,12 @@ body {
   margin: 0;
   font-family: 'Times New Roman', serif;
   font-style: italic;
+  font-weight: 700;
   font-size: clamp(12px, 2vw, 40px);
   letter-spacing: 6px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
 }
 
 /* Main Heading */
@@ -85,8 +87,8 @@ body {
   font-style: italic;
   color: white;
   letter-spacing: 2px;
-  text-shadow: 0 4px 15px rgba(255, 107, 157, 0.4);
-  animation: fadeInScale 1s ease-out 0.3s both;
+  text-shadow: 0 4px 15px rgba(48, 0, 240, 0.4);
+  animation: fadeInScale 7s ease-out 0.3s both;
   white-space: nowrap;
   /* keeps straight line */
 }
@@ -546,56 +548,57 @@ body {
    Certification Cards Layout
 ================================ */
 .cert-cards {
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-bottom: 0px;
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 0px;
 }
 
 /* Individual Card */
 .cert-card {
-    background: var(--card-bg);
-    backdrop-filter: blur(12px);
-    padding: 30px;
-    border-radius: 14px;
-    box-shadow: var(--shadow);
-    border: 1px solid rgba(255,255,255,0.1);
-    transition: var(--transition);
-    position: relative;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+  position: relative;
 }
 
 .cert-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary-color);
+  transform: translateY(-10px);
+  border-color: var(--primary-color);
 }
 
 /* Title */
 .cert-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 6px;
-    color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+  color: #fff;
 }
+
 .cert-meta {
-    font-size: 0.85rem;
-    color: #aaa;
-    margin-bottom: 18px;
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 18px;
 }
 
 
 /* Progress Bar */
 .cert-progress {
-    width: 100%;
-    height: 8px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 15px;
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
 }
 
 .cert-progress-bar {
-    height: 100%;
-    background: linear-gradient(135deg, #8b5cf6, #ec4899);
-    border-radius: 10px;
+  height: 100%;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  border-radius: 10px;
 }
 
 
@@ -608,7 +611,7 @@ body {
 
 /* Certification Item */
 .cert-item {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding: 20px;
   box-shadow: var(--shadow);
@@ -636,20 +639,20 @@ body {
 
 /* Badge Link */
 .cert-link img {
-    width: 70px;
-    transition: transform 0.3s ease;
+  width: 70px;
+  transition: transform 0.3s ease;
 }
 
 .cert-link img:hover {
-    transform: scale(1.15);
+  transform: scale(1.15);
 }
 
 /* Description */
 .cert-desc {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: #ccc;
-    margin-bottom: 20px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #ccc;
+  margin-bottom: 20px;
 }
 
 /* Description (Hidden) */
@@ -713,7 +716,7 @@ body {
 }
 
 .cert-link img:hover {
-    transform: scale(1.15);
+  transform: scale(1.15);
 }
 
 /* Badge Image */
@@ -968,116 +971,219 @@ body {
   }
 }
 
-/* Responsive Design */
+/* MOBILE: FULL SKILL CONTENT */
 @media (max-width: 768px) {
-  .h1 {
-    font-size: 40px;
-    padding-top: 30px;
-    padding-bottom: 20px;
+  .skill-card {
+    max-height: none;
+    overflow: visible;
+    cursor: default;
   }
 
-  .sdet {
-    padding-top: 60px;
-    font-size: 14px;
+  .skill-desc,
+  .skill-card ul {
+    opacity: 1 !important;
+    max-height: none !important;
+    margin-top: 10px;
   }
 
-  .keys {
-    padding: 20px;
+  /* Disable hover-only effects */
+  .skill-card:hover {
+    max-height: none;
+    box-shadow: none;
+    transform: none;
   }
 
-  .keys button {
-    width: 100px;
-    height: 40px;
-    margin: 5px;
-    font-size: 12px;
+  .cert-highlight-box {
+    overflow-x: auto;
+    padding-bottom: 10px;
   }
 
-  .job-card {
-    padding: 15px;
-    margin: 15px auto;
+  .cert-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    /* 🔒 prevent wrapping */
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    /* 🧲 snap effect */
+    -webkit-overflow-scrolling: touch;
+    /* 📱 smooth iOS scroll */
   }
 
-  .job-card h3 {
-    font-size: clamp(16px, 3vw, 22px);
+  .cert-item {
+    min-width: 85%;
+    /* 👈 card width */
+    flex: auto;
+    scroll-snap-align: start;
   }
 
-  .job-card p,
-  .job-card ul li {
-    font-size: clamp(12px, 2.5vw, 16px);
+  /* Optional: hide scrollbar */
+  .cert-cards::-webkit-scrollbar {
+    display: none;
+
+    .cert-cards {
+      scrollbar-width: none;
+    }
   }
 
-  .key-btn {
-    font-size: 12px;
-    padding: 0.5em 1.2em;
+  /* MOBILE FIX — NO OVERLAP */
+  @media (max-width: 768px) {
+
+    /* Main Heading */
+    .h1 {
+      position: relative;
+      /* ⬅️ stop fixed overlap */
+      top: auto;
+      left: auto;
+      transform: none;
+      margin-top: 80px;
+      margin-bottom: 20px;
+    }
+
+    .h1 h1 {
+      font-size: 30px;
+      white-space: normal;
+    }
+
+    /* Subtitle (SDET) */
+    .sdet {
+      position: relative;
+      /* ⬅️ stop absolute chaos */
+      top: auto;
+      left: auto;
+      transform: none;
+      margin-bottom: 30px;
+    }
+
+    .sdet p {
+      font-size: 19px;
+      letter-spacing: 3px;
+    }
+
+    /* Navigation Keys */
+    .keys {
+      position: relative;
+      top: auto;
+      right: auto;
+      left: auto;
+      margin-top: 24px;
+      align-items: center;
+    }
   }
 
-  .job-card {
-    padding: 10px 15px;
-    margin: 15px;
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .h1 {
+      font-size: 40px;
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
+
+    .sdet {
+      padding-top: 60px;
+      font-size: 14px;
+    }
+
+    .keys {
+      padding: 1px;
+    }
+
+    .keys button {
+      width: 100px;
+      height: 40px;
+      margin: 5px;
+      font-size: 12px;
+    }
+
+    .job-card {
+      padding: 15px;
+      margin: 15px auto;
+    }
+
+    .job-card h3 {
+      font-size: clamp(16px, 3vw, 22px);
+    }
+
+    .job-card p,
+    .job-card ul li {
+      font-size: clamp(12px, 2.5vw, 16px);
+    }
+
+    .key-btn {
+      font-size: 12px;
+      padding: 0.5em 1.2em;
+    }
+
+    .job-card {
+      padding: 10px 15px;
+      margin: 15px;
+    }
+
+    .job-card h3 {
+      font-size: clamp(16px, 5vw, 22px);
+    }
+
+    .job-card p,
+    .job-card ul li {
+      font-size: clamp(11px, 3vw, 14px);
+    }
+
+    .key-btn {
+      font-size: 11px;
+      padding: 0.4em 1em;
+    }
+
+    .lines {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
   }
 
-  .job-card h3 {
-    font-size: clamp(16px, 5vw, 22px);
-  }
+  @media (max-width: 480px) {
+    .sdet p {
+      letter-spacing: 3px;
+    }
 
-  .job-card p,
-  .job-card ul li {
-    font-size: clamp(11px, 3vw, 14px);
-  }
+    .h1 {
+      font-size: 28px;
+    }
 
-  .key-btn {
-    font-size: 11px;
-    padding: 0.4em 1em;
-  }
+    .h1 h1 {
+      letter-spacing: 1px;
+    }
 
-  .lines {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-}
+    .social-links {
+      position: relative;
+      /* ⬅️ stop fixed on mobile */
+      top: auto;
+      left: auto;
 
-@media (max-width: 480px) {
-  .sdet p {
-    letter-spacing: 3px;
-  }
+      .social-links img {
+        width: 14px;
+        height: 14px;
+      }
 
-  .h1 {
-    font-size: 28px;
-  }
+      .key-btn {
+        padding: 0.5em 1.1em;
+        letter-spacing: 0.5px;
+        font-size: 11px;
+      }
 
-  .h1 h1 {
-    letter-spacing: 1px;
-  }
+      .keys button {
+        width: 80px;
+        height: 35px;
+        font-size: 12px;
+      }
 
-  .social-links {
-    top: 10px;
-    left: 10px;
-  }
+      .job-card {
+        padding: 10px;
+        margin: 10px auto;
+      }
 
-  .social-links img {
-    width: 24px;
-    height: 24px;
-  }
-
-  .key-btn {
-    padding: 0.5em 1.1em;
-    letter-spacing: 0.5px;
-    font-size: 11px;
-  }
-
-  .keys button {
-    width: 80px;
-    height: 35px;
-    font-size: 11px;
-  }
-
-  .job-card {
-    padding: 10px;
-    margin: 10px auto;
-  }
-
-  .job-card h3 {
-    font-size: clamp(14px, 4vw, 20px);
+      .job-card h3 {
+        font-size: clamp(14px, 4vw, 20px);
+      }
+    }
   }
 }
