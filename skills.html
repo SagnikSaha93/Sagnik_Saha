@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="refresh" content="60">
+  <meta http-equiv="refresh" content="300">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Technical Skills — Sagnik Saha</title>
   <link rel="stylesheet" href="Main_Style.css">
@@ -133,5 +133,26 @@
 
     skillCards.forEach(card => observer.observe(card));
   </script>
+  <script>
+    const mobileNavKeys = document.querySelectorAll('.keys.keys-left, .keys.keys-right');
+
+    const handleMobileNavKeys = () => {
+      if (window.innerWidth <= 768) {
+        const isScrolled = window.scrollY > 80;
+
+        mobileNavKeys.forEach(key => {
+          key.classList.toggle('scrolled', isScrolled);
+        });
+      } else {
+        // Clean up when switching back to desktop
+        mobileNavKeys.forEach(key => key.classList.remove('scrolled'));
+      }
+    };
+
+    window.addEventListener('scroll', handleMobileNavKeys);
+    window.addEventListener('resize', handleMobileNavKeys);
+    window.addEventListener('load', handleMobileNavKeys);
+  </script>
+  <script src="keys-mobile.js" defer></script>
 
 </body>

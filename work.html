@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
   <title>Work</title>
-  <meta http-equiv="refresh" content="60">
+  <meta http-equiv="refresh" content="300">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="Main_Style.css">
 </head>
@@ -26,49 +26,27 @@
       <h3>Quality Engineering Analyst</h3>
       <p>Infosys Limited, Pune, MH | August '25 - Present</p>
       <p>Client Name: Westpac, Australia</p>
-      <p>Description: Automating testing and ensuring quality across firmware releases.</p>
+      <p>Description: Test automation and quality assurance for banking applications.</p>
 
       <h4>Overview</h4>
       <ul>
-        <li>Acted as quality gatekeeper for Intel firmware releases, ensuring test coverage, triage, and release
-          readiness for BIOS, CSME, IFWI and platform firmware components.</li>
-        <li>Owned test planning and coordinated cross-functional validation across storage, memory, BIOS and platform
-          teams.</li>
-      </ul>
+    <li>Migrated enterprise test automation from Selenium (Java) to Playwright (TypeScript) for multiple investment workflows.</li>
+    <li>Improved test stability and reduced execution time for critical regression suites.</li>
+  </ul>
 
-      <h4>Key Contributions</h4>
-      <h5>Quality Assurance & Test Strategy</h5>
-      <ul>
-        <li>Designed and executed functional, regression, and system-level test cases for BIOS, CSME, and firmware
-          platforms.</li>
-        <li>Partnered with engineering teams to define release criteria and improve end-to-end validation coverage.</li>
-      </ul>
+  <h4>Key Contributions</h4>
+  <h5>Test Automation</h5>
+  <ul>
+    <li>Developed automated test suites for investment creation and user workflows using Playwright and TypeScript.</li>
+    <li>Validated session handling, authentication flows, and regression scenarios for banking applications.</li>
+    <li>Integrated automation into CI/CD pipelines for continuous validation.</li>
+  </ul>
 
-      <h5>Test Automation & Process Improvements</h5>
-      <ul>
-        <li>Architected and implemented automation framework for IFWI & OS flashing flows, reducing manual test effort
-          by ~40%.</li>
-        <li>Automated test flows using Selenium, Robot Framework, and Python to increase test reliability and accelerate
-          regression cycles.</li>
-        <li>Integrated test automation into CI/CD (GitLab, GitHub, PACKMAN) enabling nightly regression runs and faster
-          validation turnaround.</li>
-      </ul>
-
-      <h5>Defect Management & Analysis</h5>
-      <ul>
-        <li>Validated and triaged NPK logs, BSODs, and system crashes; performed root-cause analysis using Windbg and
-          Intel ITP.</li>
-        <li>Managed bug tracking and verification in JIRA and HSDES; improved defect closure efficiency by ~25%.</li>
-        <li>Built dashboards and test-quality reports with Pandas, Matplotlib, and Excel to communicate defect trends
-          and release health to stakeholders.</li>
-      </ul>
-
-      <h5>Leadership & Collaboration</h5>
-      <ul>
-        <li>Mentored junior engineers on automation best practices and debugging methodologies.</li>
-        <li>Coordinated with Intel engineering teams across multiple domains to resolve high-priority issues and
-          streamline test processes.</li>
-      </ul>
+  <h5>Quality Assurance</h5>
+  <ul>
+    <li>Performed regression testing across multiple projects and modules.</li>
+    <li>Collaborated with development teams to identify and resolve defects early in the cycle.</li>
+  </ul>
     </div>
 
     <!-- Previous Job Experience: Wipro -->
@@ -139,11 +117,12 @@
 
   </div>
   <script>
-    // Detect elements on scroll and add 'visible' class
+    /* ========= JOB CARD REVEAL ========= */
     const jobCards = document.querySelectorAll('.job-card');
 
-    const revealOnScroll = () => {
-      const triggerBottom = window.innerHeight * 0.99; // trigger when 99% of viewport
+    const revealJobCards = () => {
+      const triggerBottom = window.innerHeight * 0.99;
+
       jobCards.forEach(card => {
         const cardTop = card.getBoundingClientRect().top;
         if (cardTop < triggerBottom) {
@@ -152,9 +131,39 @@
       });
     };
 
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll); // reveal on page load
+    /* ========= MOBILE NAV KEYS LOGIC ========= */
+    const navKeys = document.querySelectorAll('.keys-left, .keys-right');
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    const handleScroll = () => {
+      revealJobCards();
+
+      if (window.innerWidth <= 768) {
+        const currentScroll = window.scrollY;
+        const scrollingDown = currentScroll > lastScrollY && currentScroll > 80;
+
+        navKeys.forEach(key => {
+          key.classList.toggle('scrolled', scrollingDown);
+        });
+
+        lastScrollY = currentScroll;
+      }
+
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(handleScroll);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll);
+    window.addEventListener('load', revealJobCards);
   </script>
+  <script src="keys-mobile.js" defer></script>
 
 </body>
 

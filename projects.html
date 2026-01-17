@@ -2,8 +2,9 @@
 <html>
 
 <head>
+  <meta charset="utf-8" />
   <title>Projects</title>
-  <meta http-equiv="refresh" content="60">
+  <meta http-equiv="refresh" content="300">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="Main_Style.css">
 </head>
@@ -16,7 +17,7 @@
 
   <!-- Projects Section -->
   <div class="project">
-    <h2 style="text-align: center; font-style: italic; margin-bottom: 30px;">Projects & Training</h2>
+    <h2 style="text-align: center; font-style: italic; margin-bottom: 30px;">Projects</h2>
 
     <!-- Selected SDET Projects -->
     <div class="job-card">
@@ -74,22 +75,34 @@
 
   </div>
   <script>
-    // Reveal .job-card elements on scroll
     const jobCards = document.querySelectorAll('.job-card');
+    const navKeys = document.querySelectorAll('.keys.keys-left, .keys.keys-right');
 
-    const revealOnScroll = () => {
+    const onScroll = () => {
+      /* ========= Reveal Job Cards ========= */
       const triggerBottom = window.innerHeight * 0.85;
+
       jobCards.forEach(card => {
         const cardTop = card.getBoundingClientRect().top;
         if (cardTop < triggerBottom) {
           card.classList.add('visible');
         }
       });
+
+      /* ========= Mobile Nav Position ========= */
+      if (window.innerWidth <= 768) {
+        const isScrolled = window.scrollY > 80;
+
+        navKeys.forEach(key => {
+          key.classList.toggle('scrolled', isScrolled);
+        });
+      }
     };
 
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll); // reveal cards if already in viewport
+    window.addEventListener('scroll', onScroll);
+    window.addEventListener('load', onScroll);
   </script>
+  <script src="keys-mobile.js" defer></script>
 
 </body>
 

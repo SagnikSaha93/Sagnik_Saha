@@ -2,8 +2,9 @@
 <html>
 
 <head>
+    <meta charset="utf-8" />
     <title>Certifications</title>
-    <meta http-equiv="refresh" content="60">
+    <meta http-equiv="refresh" content="300">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Main_Style.css">
 </head>
@@ -244,8 +245,8 @@
                     <a href="https://drive.google.com/file/d/1WnniewxU40UKEic87WZMq1Xoe5EHKH4i/view?usp=sharing"
                         target="_blank" rel="noopener noreferrer" class="cert-link">
 
-                        <img src="images/google-cloud-logo.png" alt="ICT Certification" 
-                            title="View ICT Certification" class="cert-badge">
+                        <img src="images/google-cloud-logo.png" alt="ICT Certification" title="View ICT Certification"
+                            class="cert-badge">
                     </a>
                 </li>
                 <!-- remaining certs -->
@@ -271,35 +272,55 @@
     <script>
         /* ========= Scroll Reveal for Job Cards ========= */
         const jobCards = document.querySelectorAll('.job-card');
+        const navKeys = document.querySelectorAll('.keys.keys-left, .keys.keys-right');
 
-        const revealOnScroll = () => {
+        const handleScroll = () => {
             const triggerBottom = window.innerHeight * 0.85;
 
+            /* Reveal job cards */
             jobCards.forEach(card => {
                 const cardTop = card.getBoundingClientRect().top;
                 if (cardTop < triggerBottom) {
                     card.classList.add('visible');
                 }
             });
+
+            /* Mobile navigation keys behavior */
+            if (window.innerWidth <= 768) {
+                const isScrolled = window.scrollY > 80;
+
+                navKeys.forEach(key => {
+                    key.classList.toggle('scrolled', isScrolled);
+                });
+            } else {
+                /* Cleanup when returning to desktop */
+                navKeys.forEach(key => key.classList.remove('scrolled'));
+            }
         };
 
-        window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('load', revealOnScroll);
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+        window.addEventListener('resize', handleScroll);
 
 
         /* ========= Show More / Show Less Certifications ========= */
         const toggleBtn = document.getElementById("toggle-certs");
         const moreCerts = document.getElementById("more-certs");
 
-        toggleBtn.addEventListener("click", () => {
-            const isHidden = moreCerts.style.display === "none" || !moreCerts.style.display;
+        if (toggleBtn && moreCerts) {
+            toggleBtn.addEventListener("click", () => {
+                const isHidden = moreCerts.style.display === "none" || !moreCerts.style.display;
 
-            moreCerts.style.display = isHidden ? "block" : "none";
-            toggleBtn.textContent = isHidden
-                ? "Show Less Certifications"
-                : "Show More Certifications";
-        });
+                moreCerts.style.display = isHidden ? "block" : "none";
+                toggleBtn.textContent = isHidden
+                    ? "Show Less Certifications"
+                    : "Show More Certifications";
+            });
+        }
     </script>
+    <script src="keys-mobile.js" defer></script>
+    
+
 </body>
 
 </html>

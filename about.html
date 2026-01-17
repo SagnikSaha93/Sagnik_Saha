@@ -2,8 +2,9 @@
 <html>
 
 <head>
+  <meta charset="utf-8" />
   <title>About — Sagnik Saha</title>
-  <meta http-equiv="refresh" content="60">
+  <meta http-equiv="refresh" content="300">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="Main_Style.css">
 </head>
@@ -59,30 +60,40 @@
 
     <!-- Navigation -->
     <div class="keys keys-left">
-      <a href="projects.html" class="key-btn">Previous</a>
+      <a href="trainingsCertification.html" class="key-btn">Previous</a>
     </div>
     <div class="keys keys-right">
       <a href="index.html" class="key-btn">Home</a>
     </div>
 
-    <!-- Resume / More Info -->
+    <!-- Resume / More Info 
     <div style="margin-top: 40px; text-align: center;">
-      <a href="#" target="_blank"
-        style="text-decoration:none; color:white; font-weight:bold;">
+      <a href="#" target="_blank" style="text-decoration:none; color:white; font-weight:bold;">
         Know More →
       </a>
-    </div>
+    </div> -->
 
   </div>
   <script>
     const reveals = document.querySelectorAll(".reveal");
+    const navKeys = document.querySelectorAll(".keys-left, .keys-right");
 
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
+
+          /* Existing reveal animation */
           if (entry.isIntersecting) {
             entry.target.classList.add("active");
           }
+
+          /* MOBILE ONLY: move nav keys */
+          if (window.innerWidth <= 768) {
+            navKeys.forEach(key => {
+              key.classList.toggle("scrolled", entry.isIntersecting);
+            });
+          }
+
         });
       },
       {
@@ -92,6 +103,7 @@
 
     reveals.forEach(el => observer.observe(el));
   </script>
+  <script src="keys-mobile.js" defer></script>
 </body>
 
 </html>
