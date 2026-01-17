@@ -7,6 +7,8 @@
   --hover-color: #a7566d;
   --shadow: 0 10px 30px rgba(255, 107, 157, 0.3);
   --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --card-bg: rgba(20, 20, 30, 0.75);
+  
 }
 
 * {
@@ -65,7 +67,8 @@ body {
 
 /* Main Heading */
 .h1 {
-  position: fixed;                 /* centers relative to viewport */
+  position: fixed;
+  /* centers relative to viewport */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -75,7 +78,8 @@ body {
 }
 
 .h1 h1 {
-  margin: 0;                       /* IMPORTANT */
+  margin: 0;
+  /* IMPORTANT */
   font-family: 'Great Vibes', cursive;
   font-size: clamp(32px, 6vw, 100px);
   font-style: italic;
@@ -83,7 +87,8 @@ body {
   letter-spacing: 2px;
   text-shadow: 0 4px 15px rgba(255, 107, 157, 0.4);
   animation: fadeInScale 1s ease-out 0.3s both;
-  white-space: nowrap;             /* keeps straight line */
+  white-space: nowrap;
+  /* keeps straight line */
 }
 
 /* Background Video */
@@ -108,13 +113,16 @@ body {
 
 /* Navigation Buttons */
 .keys {
-  position: fixed;           /* sticks to top-right */
+  position: fixed;
+  /* sticks to top-right */
   top: 20px;
   right: 20px;
   display: flex;
-  flex-direction: column;    /* stack vertically */
+  flex-direction: column;
+  /* stack vertically */
   gap: 12px;
-  z-index: 10;               /* above video & content */
+  z-index: 10;
+  /* above video & content */
 }
 
 /* Page-specific key positioning */
@@ -137,7 +145,8 @@ body {
   align-items: center;
   justify-content: center;
   font-size: clamp(12px, 2vw, 14px);
-  padding: 0.6em 1.4em;          /* scales with text */
+  padding: 0.6em 1.4em;
+  /* scales with text */
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -146,7 +155,8 @@ body {
   background: rgba(0, 0, 0, 0.6);
   border-radius: 20px;
   border: 2px solid #000;
-  white-space: nowrap;        /* prevents wrapping */
+  white-space: nowrap;
+  /* prevents wrapping */
   transition: all 0.3s ease;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   z-index: 1;
@@ -185,14 +195,17 @@ body {
 
 /* Social Buttons */
 .social-links {
-  position: fixed;        /* stays top-left even on scroll */
+  position: fixed;
+  /* stays top-left even on scroll */
   top: 20px;
   left: 20px;
   margin: 0;
   display: flex;
   gap: 12px;
-  z-index: 10;            /* above video & content */
+  z-index: 10;
+  /* above video & content */
 }
+
 .social-links img {
   width: 30px;
   height: 30px;
@@ -231,7 +244,7 @@ body {
   z-index: 0;
 }
 
-.body > * {
+.body>* {
   position: relative;
   z-index: 1;
 }
@@ -240,16 +253,21 @@ body {
 /* Projects Page Styles */
 /* Container for all jobs */
 .job-card {
-  opacity: 0;                /* initially hidden */
-  background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  opacity: 0;
+  /* initially hidden */
+  background: rgba(0, 0, 0, 0.6);
+  /* semi-transparent black */
   border-radius: 15px;
   padding: 20px;
   margin: 20px auto;
-  max-width: 900px; /* keeps it centered and not too wide */
+  max-width: 900px;
+  /* keeps it centered and not too wide */
   box-shadow: 0 8px 20px rgba(255, 107, 157, 0.2);
-  transform: translateY(30px);  /* start slightly lower */
-  transition: opacity 0.8s ease, transform 0.8s ease, box-shadow 0.8s ease; 
-  box-shadow: 0 0 0 rgba(255, 107, 157, 0); /* initial no shadow */
+  transform: translateY(30px);
+  /* start slightly lower */
+  transition: opacity 0.8s ease, transform 0.8s ease, box-shadow 0.8s ease;
+  box-shadow: 0 0 0 rgba(255, 107, 157, 0);
+  /* initial no shadow */
   color: white;
   font-family: 'Times New Roman', serif;
 }
@@ -363,14 +381,15 @@ body {
 
 /* Skill Cards */
 .skill-card {
-  max-height: 85px; /* collapsed */
+  max-height: 85px;
+  /* collapsed */
   overflow: hidden;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.65);
   padding: 22px 26px;
   margin: 25px 0;
   border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 
   opacity: 0;
   transform: translateY(40px);
@@ -443,7 +462,8 @@ body {
 
 .skill-card li::before {
   content: "▸ ";
-  color: #c445b5;              /* glow accent */
+  color: #c445b5;
+  /* glow accent */
   font-weight: bold;
   margin-right: 6px;
   text-shadow: 0 0 6px rgba(194, 69, 181, 0.8);
@@ -456,10 +476,11 @@ body {
   text-align: center;
   margin: 18px auto;
   margin-right: auto;
-  max-width: 850px; /* keeps it readable */
+  max-width: 850px;
+  /* keeps it readable */
   font-size: 1rem;
   line-height: 1.7;
-  transition: 
+  transition:
     transform 0.4s ease,
     font-size 0.35s ease,
     text-shadow 0.35s ease;
@@ -472,7 +493,7 @@ body {
   padding: 8px 14px;
   transform: translateY(-8px);
   font-size: 1.08rem;
-  text-shadow: 
+  text-shadow:
     0 0 8px rgba(0, 255, 255, 0.7),
     0 0 16px rgba(0, 255, 255, 0.4);
   cursor: default;
@@ -504,11 +525,270 @@ body {
     0 0 10px rgba(255, 255, 255, 0.6),
     0 0 20px rgb(255, 255, 255);
 }
-.reveal:nth-child(1) { transition-delay: 0.1s; }
-.reveal:nth-child(2) { transition-delay: 0.2s; }
-.reveal:nth-child(3) { transition-delay: 0.3s; }
-.reveal:nth-child(4) { transition-delay: 0.4s; }
 
+.reveal:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.reveal:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.reveal:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.reveal:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+/* ===============================
+   Certification Cards Layout
+================================ */
+.cert-cards {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 0px;
+}
+
+/* Individual Card */
+.cert-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: var(--transition);
+    position: relative;
+}
+
+.cert-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+}
+
+/* Title */
+.cert-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+    color: #fff;
+}
+.cert-meta {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-bottom: 18px;
+}
+
+
+/* Progress Bar */
+.cert-progress {
+    width: 100%;
+    height: 8px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.cert-progress-bar {
+    height: 100%;
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    border-radius: 10px;
+}
+
+
+/* Certification List */
+.cert-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Certification Item */
+.cert-item {
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+/* Title Row */
+.cert-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+/* Badge */
+.cert-badge {
+  width: 70px;
+  transition: transform 0.3s ease;
+}
+
+.cert-badge:hover {
+  transform: scale(1.15);
+}
+
+/* Badge Link */
+.cert-link img {
+    width: 70px;
+    transition: transform 0.3s ease;
+}
+
+.cert-link img:hover {
+    transform: scale(1.15);
+}
+
+/* Description */
+.cert-desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Description (Hidden) */
+/* .cert-description {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.5;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+} */
+
+.cert-item:last-child {
+  border-bottom: none;
+}
+
+/* Hover Reveal (Skills-like UX) */
+.cert-item:hover .cert-description {
+  opacity: 1;
+  max-height: 120px;
+  margin-top: 6px;
+}
+
+.cert-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 18px rgba(94, 104, 250, 0.45);
+  transform: translateY(-3px);
+}
+
+/* Highlighted Certification Box */
+.cert-highlight-box {
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 10px;
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 25px;
+}
+
+/* Certification Text */
+.cert-text {
+  color: #f1f1f1;
+  font-size: 15px;
+  max-width: 80%;
+}
+
+.cert-issuer {
+  font-size: 13px;
+  color: #aaa;
+  margin-left: 6px;
+}
+
+/* Badge Link */
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-link img:hover {
+    transform: scale(1.15);
+}
+
+/* Badge Image */
+.cert-badge {
+  width: 80px;
+  transition: transform 0.3s ease;
+}
+
+.cert-badge:hover {
+  transform: scale(1.15);
+}
+
+.cert-link:hover .cert-badge {
+  transform: scale(1.12);
+  filter: drop-shadow(0 0 16px rgba(94, 104, 250, 0.9));
+}
+
+/* Hidden Certifications */
+#more-certs {
+  display: none;
+}
+
+/* Show More Button */
+.show-more-btn {
+  margin: 20px auto 0;
+  display: block;
+  background: linear-gradient(135deg, #004cff, #c445b5);
+  border: none;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.show-more-btn:hover {
+  box-shadow: 0 4px 15px rgba(94, 104, 250, 0.4);
+}
+
+.job-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.job-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glow Hover Effect */
+.cert-badge:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 18px rgba(94, 104, 250, 0.7);
+}
+
+/* Mobile Friendly */
+@media (max-width: 600px) {
+  .cert-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cert-text {
+    max-width: 100%;
+  }
+}
+
+.cert-issuer {
+  font-size: 0.85em;
+  font-style: italic;
+  opacity: 0.75;
+  margin-left: 6px;
+  color: #ffffff;
+}
 
 /* ===== TIMELINE LAYOUT ===== 
 
@@ -542,7 +822,7 @@ body {
 }
 
 /* ===== TIMELINE ITEM ===== */
-
+/* 
 .timeline-item {
   position: relative;
   margin-bottom: 50px;
@@ -564,16 +844,16 @@ body {
   height: 14px;
   background: #004cff;
   border-radius: 50%;
-  box-shadow: 0 0 12px rgba(94,104,250,0.8);
-}
+  box-shadow: 0 0 12px rgba(94, 104, 250, 0.8);
+} */
 
 /* ===== CONTENT CARD ===== */
 
 .timeline-content {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   padding: 18px 22px;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(94,104,250,0.15);
+  box-shadow: 0 6px 20px rgba(94, 104, 250, 0.15);
   transition: all 0.4s ease;
 }
 
@@ -590,7 +870,7 @@ body {
 /* ===== HOVER GLOW ===== */
 
 .timeline-content:hover {
-  box-shadow: 0 10px 30px rgba(94,104,250,0.35);
+  box-shadow: 0 10px 30px rgba(94, 104, 250, 0.35);
   transform: scale(1.03);
 }
 
@@ -607,6 +887,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -617,6 +898,7 @@ body {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -628,6 +910,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -639,6 +922,7 @@ body {
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -649,6 +933,7 @@ body {
   from {
     box-shadow: 0 0 10px rgba(94, 104, 250, 0.2);
   }
+
   to {
     box-shadow: 0 0 22px rgba(194, 69, 181, 0.6);
   }
@@ -659,13 +944,15 @@ body {
   0% {
     box-shadow: 0 0 10px rgba(255, 107, 157, 0.4), 0 0 20px rgba(196, 69, 105, 0.3);
   }
+
   50% {
     box-shadow: 0 0 25px rgba(255, 107, 157, 0.6), 0 0 50px rgba(196, 69, 105, 0.5);
   }
+
   100% {
     box-shadow: 0 0 10px rgba(255, 107, 157, 0.4), 0 0 20px rgba(196, 69, 105, 0.3);
   }
-  
+
 }
 
 /* Smooth mobile fallback */
@@ -704,6 +991,7 @@ body {
     margin: 5px;
     font-size: 12px;
   }
+
   .job-card {
     padding: 15px;
     margin: 15px auto;
@@ -722,7 +1010,7 @@ body {
     font-size: 12px;
     padding: 0.5em 1.2em;
   }
-  
+
   .job-card {
     padding: 10px 15px;
     margin: 15px;
@@ -757,6 +1045,7 @@ body {
   .h1 {
     font-size: 28px;
   }
+
   .h1 h1 {
     letter-spacing: 1px;
   }
@@ -787,6 +1076,7 @@ body {
     padding: 10px;
     margin: 10px auto;
   }
+
   .job-card h3 {
     font-size: clamp(14px, 4vw, 20px);
   }
