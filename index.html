@@ -479,6 +479,9 @@
     }
 
     .cert-item {
+      text-decoration: none;
+      color: inherit;
+      display: block;
       background: rgba(255, 255, 255, 0.05);
       border-radius: 12px;
       padding: 20px;
@@ -512,6 +515,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      font-color: #fff;
     }
 
     .cert-badge {
@@ -537,22 +541,33 @@
       margin: 20px auto;
       max-width: 900px;
       width: 100%;
-      display: flex;
+      display: none;
       flex-direction: column;
       align-items: center;
+    }
+
+    .cert-list.active {
+      display: flex;
+    }
+
+    .cert-list li {
+      width: 100%;
+      max-width: 900px;
+      margin-bottom: 15px;
     }
 
     .cert-list .cert-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 15px;
       width: 100%;
       max-width: 900px;
+      padding: 15px 20px;
     }
 
     .cert-text {
       flex: 1;
+      color: #ffffff;
     }
 
     #more-certs {
@@ -969,7 +984,7 @@
 
       <div class="cert-highlight-box">
         <div class="cert-cards">
-          <div class="cert-item">
+          <a href="https://drive.google.com/file/d/1JSNPtDD8yehrcGIlwTXTd6htC8HRG2Ef/view" target="_blank" rel="noopener noreferrer" class="cert-item">
             <div class="cert-info">
               <span>HTML 5-L3 (2025)</span>
               <span class="cert-issuer">Wipro</span>
@@ -977,9 +992,9 @@
             <div class="cert-description">
               Advanced HTML5 concepts including semantic markup, accessibility, responsive layouts, and performance optimization.
             </div>
-          </div>
+          </a>
 
-          <div class="cert-item">
+          <a href="https://partner.cloudskillsboost.google/public_profiles/2bee9953-6677-4b39-90b4-e320c00a628d/badges/14440203?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" target="_blank" rel="noopener noreferrer" class="cert-item">
             <div class="cert-info">
               <span>Attention Mechanism (2025)</span>
               <span class="cert-issuer">Google Cloud</span>
@@ -987,9 +1002,9 @@
             <div class="cert-description">
               Understanding attention mechanisms used in transformers and modern deep learning architectures.
             </div>
-          </div>
+          </a>
 
-          <div class="cert-item">
+          <a href="https://partner.cloudskillsboost.google/public_profiles/2bee9953-6677-4b39-90b4-e320c00a628d/badges/14440298?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" target="_blank" rel="noopener noreferrer" class="cert-item">
             <div class="cert-info">
               <span>Image Captioning Models (2025)</span>
               <span class="cert-issuer">Google Cloud</span>
@@ -997,51 +1012,79 @@
             <div class="cert-description">
               Built and evaluated encoder-decoder models for automatic image caption generation.
             </div>
-          </div>
+          </a>
         </div>
       </div>
 
-      <ul class="cert-list">
-        <li class="cert-item">
-          <span class="cert-text">Encoder-Decoder Architecture — 2025</span>
+      <ul class="cert-list" id="moreCerts">
+        <li>
+          <a href="https://partner.cloudskillsboost.google/public_profiles/2bee9953-6677-4b39-90b4-e320c00a628d/badges/14440268?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" target="_blank" rel="noopener noreferrer" class="cert-item">
+            <span class="cert-text">Encoder-Decoder Architecture — 2025</span>
+          </a>
         </li>
-        <li class="cert-item">
-          <span class="cert-text">Generative AI Fundamentals — 2025</span>
+        <li>
+          <a href="https://partner.cloudskillsboost.google/public_profiles/2bee9953-6677-4b39-90b4-e320c00a628d/badges/14439931?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" target="_blank" rel="noopener noreferrer" class="cert-item">
+            <span class="cert-text">Generative AI Fundamentals — 2025</span>
+          </a>
         </li>
-        <li class="cert-item">
-          <span class="cert-text">Google Cloud GenAI - L2 — 2025 (Wipro)</span>
+        <li>
+          <a href="https://drive.google.com/file/d/1Rk2A0ZQQ-1FG14Hpm0rIFGFJWioNzLrs/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-item">
+            <span class="cert-text">Google Cloud GenAI - L2 — 2025 (Wipro)</span>
+          </a>
         </li>
-        <li class="cert-item">
-          <span class="cert-text">Google Cloud GenAI - L1 — 2025 (Wipro)</span>
+        <li>
+          <a href="https://drive.google.com/file/d/1SL-9tyUCh3sv57FN40MtQe6I6qcLcfsc/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-item">
+            <span class="cert-text">Google Cloud GenAI - L1 — 2025 (Wipro)</span>
+          </a>
         </li>
-        <li class="cert-item">
-          <span class="cert-text">Introduction to Generative AI — 2025</span>
+        <li>
+          <a href="https://partner.cloudskillsboost.google/public_profiles/2bee9953-6677-4b39-90b4-e320c00a628d/badges/14439383?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" target="_blank" rel="noopener noreferrer" class="cert-item">
+            <span class="cert-text">Introduction to Generative AI — 2025</span>
+          </a>
         </li>
-        <li class="cert-item">
-          <span class="cert-text">Introduction to Large Language Models — 2025</span>
+        <li>
+          <a href="https://partner.cloudskillsboost.google/public_profiles/2bee9953-6677-4b39-90b4-e320c00a628d/badges/14439561?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" target="_blank" rel="noopener noreferrer" class="cert-item">
+            <span class="cert-text">Introduction to Large Language Models — 2025</span>
+          </a>
         </li>
-        <li class="cert-item">
-          <span class="cert-text">Responsible AI: Applying AI Principles with Google Cloud — 2025</span>
+        <li>
+          <a href="https://partner.cloudskillsboost.google/public_profiles/2bee9953-6677-4b39-90b4-e320c00a628d/badges/14439968?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" target="_blank" rel="noopener noreferrer" class="cert-item">
+            <span class="cert-text">Responsible AI: Applying AI Principles with Google Cloud — 2025</span>
+          </a>
         </li>
-        <li class="cert-item">
-          <span class="cert-text">Introduction to Responsible AI — 2025</span>
+        <li>
+          <a href="https://partner.cloudskillsboost.google/public_profiles/2bee9953-6677-4b39-90b4-e320c00a628d/badges/14439696?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" target="_blank" rel="noopener noreferrer" class="cert-item">
+            <span class="cert-text">Introduction to Responsible AI — 2025</span>
+          </a>
         </li>
-        <li class="cert-item">
-          <span class="cert-text">Transformer Models and BERT Model — 2025</span>
+        <li>
+          <a href="https://partner.cloudskillsboost.google/public_profiles/2bee9953-6677-4b39-90b4-e320c00a628d/badges/14440331?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" target="_blank" rel="noopener noreferrer" class="cert-item">
+            <span class="cert-text">Transformer Models and BERT Model — 2025</span>
+          </a>
         </li>
-        <li class="cert-item">
-          <span class="cert-text">The Generative AI Fundamentals & Responsible Usage at Wipro — 2023</span>
+        <li>
+          <a href="https://drive.google.com/file/d/1B5v8YWxrejgoz8GRSr-Od60Dy6WeNcKo/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-item">
+            <span class="cert-text">The Generative AI Fundamentals & Responsible Usage at Wipro — 2023</span>
+          </a>
         </li>
-        <li class="cert-item">
-          <span class="cert-text">Google Cloud Online Training Certificate — 2020</span>
+        <li>
+          <a href="https://drive.google.com/file/d/1o4jKxr1d4nUT1L0LdbPMy4cHO6n23uv-/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-item">
+            <span class="cert-text">Google Cloud Online Training Certificate — 2020</span>
+          </a>
         </li>
-        <li class="cert-item">
-          <span class="cert-text">Microsoft Training Associate — 05/2019 - 06/2019</span>
+        <li>
+          <a href="https://www.youracclaim.com/badges/2978cf3b-b477-4b6c-9028-2393d232253a" target="_blank" rel="noopener noreferrer" class="cert-item">
+            <span class="cert-text">Microsoft Training Associate — 05/2019 - 06/2019</span>
+          </a>
         </li>
-        <li class="cert-item">
-          <span class="cert-text">Industrial Training Institute — 04/2013 - 06/2013: Computer Fundamentals, MS-Office & Internet (ICT 101)</span>
+        <li>
+          <a href="https://drive.google.com/file/d/1WnniewxU40UKEic87WZMq1Xoe5EHKH4i/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-item">
+            <span class="cert-text">Industrial Training Institute — 04/2013 - 06/2013: Computer Fundamentals, MS-Office & Internet (ICT 101)</span>
+          </a>
         </li>
       </ul>
+
+      <button id="toggleCerts" class="show-more-btn">Show More Certifications</button>
     </div>
   </section>
 
@@ -1144,6 +1187,24 @@
 
     window.addEventListener('scroll', revealElements);
     window.addEventListener('load', revealElements);
+
+    // Show More/Less Certifications Toggle
+    const toggleCertsBtn = document.getElementById('toggleCerts');
+    const moreCerts = document.getElementById('moreCerts');
+
+    if (toggleCertsBtn && moreCerts) {
+      toggleCertsBtn.addEventListener('click', () => {
+        const isHidden = !moreCerts.classList.contains('active');
+        
+        if (isHidden) {
+          moreCerts.classList.add('active');
+          toggleCertsBtn.textContent = 'Show Less Certifications';
+        } else {
+          moreCerts.classList.remove('active');
+          toggleCertsBtn.textContent = 'Show More Certifications';
+        }
+      });
+    }
 
     // Active nav link on scroll
     const sections = document.querySelectorAll('section');
