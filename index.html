@@ -703,8 +703,8 @@
 </head>
 <body>
   <!-- Background Video -->
-  <video autoplay muted loop class="bg-video">
-    <source src="images/snowfall-in-forest.3840x2160.mp4" type="video/mp4">
+  <video autoplay muted loop class="bg-video" id="bgVideo">
+    <source src="" type="video/mp4" id="videoSource">
   </video>
 
   <!-- Navigation Bar -->
@@ -1093,6 +1093,26 @@
   </section>
 
   <script>
+    // Random Background Video
+    const videoSources = [
+      'images/gojo-blue-eyes-jujutsu-kaisen-HD-live.mp4',
+      'images/blurred-sunset-while-raining.3840x2160.mp4',
+      'images/rain-drops-on-window.3840x2160.mp4',
+      'images/sea-of-clouds-live-wallpaper-wallsflow-com.mp4',
+      'images/snowfall-in-forest.3840x2160.mp4',
+      'images/Green Trees with Light Rays 4k.mp4',
+      'images/mist-covered-mountain.3840x2160.mp4',
+      'images/full-moon-elden-ring.3840x2160.mp4'
+    ];
+
+    // Select random video
+    const randomVideo = videoSources[Math.floor(Math.random() * videoSources.length)];
+    const videoSource = document.getElementById('videoSource');
+    const bgVideo = document.getElementById('bgVideo');
+    
+    videoSource.src = randomVideo;
+    bgVideo.load();
+
     // Mobile Menu Toggle
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
